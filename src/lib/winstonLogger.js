@@ -33,7 +33,7 @@ const loggerHttp = winston.createLogger({
 
 const httpLogger = (req, res, next) => {
   const start = Date.now();
-  console.log("-----------Enter Logger-----", req.url, req.body, req.query);
+  // console.log("-----------Enter Logger-----", req.url, req.body, req.query);
   res.on("finish", () => {
     const duration = Date.now() - start;
     loggerHttp.info(
