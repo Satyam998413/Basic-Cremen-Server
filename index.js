@@ -1,6 +1,17 @@
 // Import packages
 const express = require("express");
+const cors = require('cors');
 
+
+
+
+// Middleware
+// app.use(cors({
+//   origin: 'https://movies-app-review.vercel.app',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true,
+// }));
 // Middlewares
 const app = express();
 app.use(express.json());
