@@ -24,6 +24,14 @@ app.use(httpLogger);
 
 
 // Routes
+app.get("/", async (req, res, next) => {
+  return res.status(200).json({
+    title: "Express Testing",
+    message: "The app is working properly!",
+  });
+});
+
+// Routes
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/movies', require('./routes/movie.routes'));
 app.use('/api/reviews', require('./routes/review.routes'));
