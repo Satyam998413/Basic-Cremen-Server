@@ -9,7 +9,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: 'https://movies-app-review.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}));
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
